@@ -1,0 +1,13 @@
+package com.example.dungeongame.model.tileset;
+
+public enum SpriteType {
+    SPRITE_PLAYER,
+    SPRITE_ENEMY_GHOST_MICHELIN,
+    SPRITE_ENEMY_GHOST_PHANTOM,
+    SPRITE_ENEMY_GOBLIN_OGRE,
+    SPRITE_ENEMY_GOBLIN_ORC,
+    SPRITE_ITEM_HEALTH,
+    SPRITE_ITEM_ATTACK,
+    SPRITE_ITEM_TELEPORT,
+    SPRITE_ITEM_SCORE
+}

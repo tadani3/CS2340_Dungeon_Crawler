@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Centering -->
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Previous Attempt -->
+    <TextView
+        android:id="@+id/title_prevAttempt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="250dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/empty"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScroll_prevAttempt"
+        android:layout_width="345sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_prevAttempt">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="1sp"
+            tools:layout_editor_absoluteY="1sp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/header_previousAttempt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12sp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/header_leaderboard"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="1sp"
+                tools:layout_editor_absoluteY="1sp">
+
+                <TextView
+                    android:id="@+id/header_paRank"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="@string/empty"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/header_paPlayerName"
+                    android:layout_width="135sp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:scrollHorizontally="true"
+                    android:text="@string/empty"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/header_paScore"
+                    android:layout_width="65sp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="@string/empty"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/header_paDateTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="@string/empty"
+                    android:textSize="20sp" />
+            </TableRow>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Leaderboard -->
+    <TextView
+        android:id="@+id/title_leaderboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16sp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/title_leaderboard"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScroll_prevAttempt" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScroll_leaderboard"
+        android:layout_width="345sp"
+        android:layout_height="300sp"
+        android:layout_marginTop="4sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_leaderboard">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="1sp"
+                tools:layout_editor_absoluteY="1sp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/header_leaderboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16sp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="@string/header_leaderboard"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:layout_editor_absoluteX="1sp"
+                    tools:layout_editor_absoluteY="1sp">
+
+                    <TextView
+                        android:id="@+id/header_lbRank"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="@string/empty"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/header_lbPlayerName"
+                        android:layout_width="135sp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:scrollHorizontally="true"
+                        android:text="@string/empty"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/header_lbScore"
+                        android:layout_width="65sp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="@string/empty"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/header_lbDateTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="@string/empty"
+                        android:textSize="20sp" />
+                </TableRow>
+            </LinearLayout>
+        </ScrollView>
+    </HorizontalScrollView>
+
+    <!-- Buttons -->
+    <Button
+        android:id="@+id/button_restart"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="@string/button_restart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScroll_leaderboard" />
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="@string/button_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_restart" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

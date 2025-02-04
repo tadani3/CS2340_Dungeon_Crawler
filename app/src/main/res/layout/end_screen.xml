@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/es_prevAttempt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="250dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/label_previousAttempt"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScroll_prevAttempt"
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/es_prevAttempt">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="1sp"
+            tools:layout_editor_absoluteY="1sp">
+
+            <TextView
+                android:id="@+id/header_attempt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12sp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/header_leaderboard"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="1sp"
+                tools:layout_editor_absoluteY="1sp">
+
+                <TextView
+                    android:id="@+id/header_attemptRank"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="@string/empty"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/header_attemptPlayerName"
+                    android:layout_width="135sp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:scrollHorizontally="true"
+                    android:text="@string/empty"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/header_attemptScore"
+                    android:layout_width="65sp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="@string/empty"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/header_attemptDateTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="@string/empty"
+                    android:textSize="20sp" />
+            </TableRow>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/es_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/empty"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScroll_prevAttempt" />
+
+    <Button
+        android:id="@+id/es_viewLeaderboard_button"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="@string/button_leaderboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/es_spriteFrame" />
+
+    <Button
+        android:id="@+id/es_restartButton"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="@string/button_restart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/es_viewLeaderboard_button" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <FrameLayout
+        android:id="@+id/es_spriteFrame"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/es_status">
+
+        <ImageView
+            android:id="@+id/es_sprite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@+id/sprite_description"
+            app:srcCompat="@drawable/question_mark" />
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

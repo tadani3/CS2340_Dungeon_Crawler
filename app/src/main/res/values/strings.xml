@@ -1,0 +1,46 @@
+<resources>
+    // Full App
+    <string name="app_name">Dungeon Game</string>
+    <string name="empty">-</string>
+    // Starter Config
+    <string name="game_settings_title">Game Settings</string>
+    <string name="input_response_wrong">No valid name was created.</string>
+    <string name="input_response_correct">Good name choice.</string>
+    <string name="input_title">Input Player Name:</string>
+    // Difficulty
+    <string name="title_easyMode">Easy Mode</string>
+    <string name="title_mediumMode">Medium Mode</string>
+    <string name="title_hardMode">Hard Mode</string>
+    // Stat Labels
+    <string name="label_hp">"❤️ %1$d/%2$d"</string>
+    <string name="label_playerName">"%1$s"</string>
+    <string name="label_difficulty">"Difficulty: %1$s"</string>
+    // Leaderboard
+    <string name="title_leaderboard">Leaderboard</string>
+    <string name="header_leaderboard">"Rank.   Player Name       Score     Date-Time"</string>
+    <string name="button_leaderboard">View Leaderboard</string>
+    <string name="description_playerSprite">Depiction of the Player\'s sprite.</string>
+    // Attempt
+    <string name="label_previousAttempt">Your Previous Attempt</string>
+    <string name="label_currentAttempt">Your Current Attempt</string>
+    // Pause Menu
+    <string name="description_pauseButton">Image that lets the user pause the game.</string>
+    <string name="title_pauseMenu">Game Paused.</string>
+    // Buttons
+    <string name="button_select">Select Choices</string>
+    <string name="button_restart">Restart</string>
+    <string name="button_start">Start</string>
+    <string name="button_exit">Exit</string>
+    <string name="button_resign">Resign</string>
+    <string name="button_resume">Resume</string>
+    <string name="button_back">Back</string>
+    <string name="button_luigi">Luigi</string>
+    <string name="button_mario">Mario</string>
+    <string name="button_bowser">Bowser</string>
+    // Score
+    <string name="label_score">"Score: %1$d"</string>
+    //Maps
+    <string name= "advance_next_room">Advance to next Room</string>
+    <string name="next_room">Next Room</string>
+    <string name= "navigate_leaderboard">Navigate to End Screen</string>
+</resources>
