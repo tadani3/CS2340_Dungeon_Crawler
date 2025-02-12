@@ -1,4 +1,4 @@
-# CS2340A_Team42
+# CS2340A_Team42 Dungeon Crawler Game
 Fall 2023 | CS 2340
 
 This code repository is a Dungeon Crawler-style game in which you, as a player character, must traverse over a series of rooms as quickly as possible to maintain the highest possible game score. 
